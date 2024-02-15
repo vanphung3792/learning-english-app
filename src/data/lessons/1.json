@@ -1,0 +1,51 @@
+{
+  "nouns": [
+    {
+      "word": "cat",
+      "pronunciation": "/kæt/",
+      "meaning": "con mèo"
+    },
+    {
+      "word": "book",
+      "pronunciation": "/bʊk/",
+      "meaning": "quyển sách"
+    },
+    {
+      "word": "tree",
+      "pronunciation": "/triː/",
+      "meaning": "cái cây"
+    },
+    {
+      "word": "car",
+      "pronunciation": "/kɑːr/",
+      "meaning": "xe hơi"
+    },
+    {
+      "word": "house",
+      "pronunciation": "/haʊs/",
+      "meaning": "cái nhà"
+    },
+    {
+      "word": "dog",
+      "pronunciation": "/dɔːɡ/",
+      "meaning": "con chó"
+    },
+    {
+      "word": "computer",
+      "pronunciation": "/kəmˈpjuːtər/",
+      "meaning": "máy tính"
+    }
+  ],
+  "verbs": [
+    {
+      "word": "run",
+      "pronunciation": "/rʌn/",
+      "meaning": "chạy"
+    },
+    {
+      "word": "eat",
+      "pronunciation": "/iːt/",
+      "meaning": "ăn"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "nouns": [
+    {
+      "word": "apple",
+      "pronunciation": "/ˈæpəl/",
+      "meaning": "quả táo"
+    },
+    {
+      "word": "banana",
+      "pronunciation": "/bəˈnænə/",
+      "meaning": "quả chuối"
+    },
+    {
+      "word": "orange",
+      "pronunciation": "/ˈɔːrɪndʒ/",
+      "meaning": "quả cam"
+    },
+    {
+      "word": "grape",
+      "pronunciation": "/ɡreɪp/",
+      "meaning": "quả nho"
+    },
+    {
+      "word": "watermelon",
+      "pronunciation": "/ˈwɔːtərmelən/",
+      "meaning": "quả dưa hấu"
+    },
+    {
+      "word": "strawberry",
+      "pronunciation": "/ˈstrɔːbəri/",
+      "meaning": "quả dâu tây"
+    },
+    {
+      "word": "pineapple",
+      "pronunciation": "/ˈpaɪnæpl̩/",
+      "meaning": "quả dứa"
+    }
+  ],
+  "verbs": [
+    {
+      "word": "swim",
+      "pronunciation": "/swɪm/",
+      "meaning": "bơi"
+    },
+    {
+      "word": "dance",
+      "pronunciation": "/dæns/",
+      "meaning": "nhảy múa"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply
+        text-rose-500
+    }
+
+h1 {
+    @apply 
+        text-4xl 
+        font-mono 
+        mb-16 
+        underline 
+        uppercase
+}
+
+h2 {
+    @apply 
+        text-4xl 
+        font-mono 
+        uppercase
+}
+
+h5 {
+    @apply 
+        text-6xl 
+        font-bold
+        font-mono
+        lowercase
+}
+
+h6 {
+    @apply 
+        text-6xl 
+        font-thin
+}
+
+.divider {
+    @apply 
+        bg-rose-500 
+        w-1
+        h-full
+}
