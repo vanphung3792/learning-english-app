@@ -1,10 +1,12 @@
 import { IoCloseCircle } from "react-icons/io5"
+import { useLesson } from "../../context/LessonContext"
 
 type SentenceProps = {
-    onClose: () => void;
 }
 
-const Sentence = ({ onClose } : SentenceProps) => {
+const Sentence = ({  } : SentenceProps) => {
+
+  const { closeSentence } = useLesson()
 
   return (
     <div
@@ -15,7 +17,7 @@ const Sentence = ({ onClose } : SentenceProps) => {
             w-full
         "
     >
-        <button className="self-end" onClick={onClose}><IoCloseCircle className="w-6 h-6" /></button>
+        <button className="self-end" onClick={closeSentence}><IoCloseCircle className="w-6 h-6" /></button>
         Sentence
     </div>
   )

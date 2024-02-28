@@ -1,9 +1,9 @@
 import { IoCloseCircle } from "react-icons/io5"
 import WordCard from "../WordCard";
 import { useEffect, useState } from "react";
+import { useLesson } from "../../context/LessonContext";
 
 type VocabProps = {
-    onClose: () => void;
     lessonId: string;
 }
 
@@ -24,9 +24,11 @@ type LessonData = {
     verbs: Verb[];
 }
 
-const Vocab = ({ onClose, lessonId } : VocabProps) => {
+const Vocab = ({ lessonId } : VocabProps) => {
 
   const [lessonData, setLessonData] = useState<LessonData | null>(null)
+
+  const { closeVocab } = useLesson()
 
   useEffect(() => {
     import(`../../data/lessons/${lessonId}.json`)
@@ -46,7 +48,7 @@ const Vocab = ({ onClose, lessonId } : VocabProps) => {
             w-full
         "
     >
-        <button className="self-end" onClick={onClose}><IoCloseCircle className="w-6 h-6" /></button>
+        <button className="self-end" onClick={closeVocab}><IoCloseCircle className="w-6 h-6" /></button>
         <WordCard word="hello" pronunciation="hɛˈloʊ" meaning="xin chào" onChange={() => {}} />
     </div>
   )

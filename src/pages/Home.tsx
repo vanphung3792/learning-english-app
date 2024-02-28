@@ -17,8 +17,8 @@ const Home = () => {
         <div
           className="flex flex-wrap justify-start items-center gap-4"
         >
-          {lessons.map((lesson) => (
-            <Link to={`/lesson/${lesson}`} className={buttonStyle}>Bài {lesson}</Link>
+          {lessons.map((lesson, index) => (
+            <Link key={index} to={`/lesson/${lesson}`} className={buttonStyle}>Bài {lesson}</Link>
           ))}
         </div>
         <Outlet></Outlet>

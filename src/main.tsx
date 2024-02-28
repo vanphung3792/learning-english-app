@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './pages/Home.tsx'
 import Lesson from './pages/Lesson.tsx'
+import LessonProvider from './context/LessonContext.tsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <LessonProvider>
+      <RouterProvider router={router} />
+    </LessonProvider>
   </React.StrictMode>,
 )

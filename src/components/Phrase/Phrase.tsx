@@ -1,10 +1,12 @@
 import { IoCloseCircle } from "react-icons/io5"
+import { useLesson } from "../../context/LessonContext"
 
 type PhraseProps = {
-    onClose: () => void;
 }
 
-const Phrase = ({ onClose } : PhraseProps) => {
+const Phrase = ({  } : PhraseProps) => {
+
+  const { closePhrase } = useLesson()
 
   return (
     <div
@@ -15,7 +17,7 @@ const Phrase = ({ onClose } : PhraseProps) => {
             w-full
         "
     >
-        <button className="self-end" onClick={onClose}><IoCloseCircle className="w-6 h-6" /></button>
+        <button className="self-end" onClick={closePhrase}><IoCloseCircle className="w-6 h-6" /></button>
         Phrase
     </div>
   )

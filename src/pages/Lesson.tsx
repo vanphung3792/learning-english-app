@@ -4,21 +4,27 @@ import Button from "../components/Button"
 import Vocab from "../components/Vocab/Vocab"
 import Phrase from "../components/Phrase/Phrase"
 import Sentence from "../components/Sentence/Sentence"
-import { useState } from "react"
+import { useLesson } from "../context/LessonContext"
 
 const Lesson = () => {
 
     const params = useParams()
     const lessonId = params.lessonId
 
-    const [isVocabOpen, setIsVocabOpen] = useState(false)
-    const [isPhraseOpen, setIsPhraseOpen] = useState(false)
-    const [isSentenceOpen, setIsSentenceOpen] = useState(false)
-    
-    const isLessonOpen = isVocabOpen || isPhraseOpen || isSentenceOpen
-    
-    if (!lessonId) return null
+    if (!lessonId) {
+        return <h1>404</h1>
+    }
 
+    const {
+      isLessonOpen,
+      isVocabOpen,
+      isPhraseOpen,
+      isSentenceOpen,
+      openVocab,
+      openPhrase,
+      openSentence,
+    } = useLesson()
+    
   return (
     <div id="lesson"
         className="
@@ -64,29 +70,17 @@ const Lesson = () => {
             >
               <Button
                 label="Từ vựng"
-                onClick={() => {
-                  setIsVocabOpen(true)
-                  setIsPhraseOpen(false)
-                  setIsSentenceOpen(false)
-                }}
+                onClick={openVocab}
                 customClassName="border-l-4 solid border-rose-500"
               />
               <Button
                 label="Cụm từ"
-                onClick={() => {
-                  setIsPhraseOpen(true)
-                  setIsVocabOpen(false)
-                  setIsSentenceOpen(false)
-                }}
+                onClick={openPhrase}
                 customClassName="border-l-4 solid border-rose-500"
               />
               <Button
                 label="Câu"
-                onClick={() => {
-                  setIsSentenceOpen(true)
-                  setIsVocabOpen(false)
-                  setIsPhraseOpen(false)
-                }}
+                onClick={openSentence}
                 customClassName="border-l-4 solid border-rose-500"
               />
             </div>
@@ -110,15 +104,15 @@ const Lesson = () => {
 
               {/* Detail */}
               {isVocabOpen && (
-                <Vocab lessonId={lessonId} onClose={() => setIsVocabOpen(false)} />
+                <Vocab lessonId={lessonId}/>
               )}
 
               {isPhraseOpen && (
-                <Phrase onClose={() => setIsPhraseOpen(false)} />
+                <Phrase />
               )}
 
               {isSentenceOpen && (
-                <Sentence onClose={() => setIsSentenceOpen(false)} />
+                <Sentence />
               )}
             </div>
           )}
